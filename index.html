@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GgmoRoom</title>
+  <style>
+    body {
+      background-color: #2b2b2b; /* тёмно-серый фон */
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 10px 0 40px 0;
+      color: #ccc;
+    }
+
+    button {
+      background-color: #FFD700; /* жёлтая кнопка */
+      color: black;
+      border: none;
+      padding: 15px 40px;
+      font-size: 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #2b2b2b; /* серая как фон */
+      color: white;
+      border: 1px solid #FFD700;
+    }
+  </style>
+</head>
+<body>
+  <h1>GgmoRoom</h1>
+  <p>Это мой сайт :)</p>
+  <button onclick="openNextPage()">начать бесплатно</button>
+
+  <script>
+    function openNextPage() {
+      window.open('regornot.html', '_blank'); // открывает новую вкладку
+      window.close(); // закрывает текущую
+    }
+  </script>
+</body>
+</html>

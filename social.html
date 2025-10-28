@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Соц. сети — GgmoRoom</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #2b2b2b;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Кнопка Назад */
+    .back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #FFD700;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #2b2b2b;
+      color: white;
+      border: 1px solid #FFD700;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .social-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .social-button {
+      background-color: #FFD700;
+      color: black;
+      border: none;
+      padding: 15px 40px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 250px;
+    }
+
+    .social-button:hover {
+      background-color: #2b2b2b;
+      color: white;
+      border: 1px solid #FFD700;
+    }
+  </style>
+</head>
+<body>
+  <button class="back-button" onclick="goBack()">Назад</button>
+
+  <h1>Соц. сети</h1>
+
+  <div class="social-buttons">
+    <button class="social-button" onclick="openLink('https://www.youtube.com/@Ggmodd2_5')">YouTube</button>
+    <button class="social-button" onclick="openLink('https://t.me/ggmogd123')">Telegram</button>
+    <button class="social-button" onclick="openLink('https://discord.gg/yxSeTWTD')">Discord</button>
+  </div>
+
+  <script>
+    function goBack() {
+      window.open('site1.html', '_blank');
+      window.close();
+    }
+
+    function openLink(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>

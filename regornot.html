@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация — GgmoRoom</title>
+  <style>
+    body {
+      background-color: #2b2b2b; /* тёмно-серый фон */
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    input {
+      width: 300px;
+      padding: 12px;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      text-align: center;
+      outline: none;
+    }
+
+    input::placeholder {
+      color: #bbb;
+    }
+
+    button {
+      background-color: #FFD700; /* жёлтая кнопка */
+      color: black;
+      border: none;
+      padding: 15px 40px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #2b2b2b; /* серая как фон */
+      color: white;
+      border: 1px solid #FFD700;
+    }
+  </style>
+</head>
+<body>
+  <h1>Кто вы?</h1>
+
+  <form id="regForm" onsubmit="registerUser(event)">
+    <input type="text" id="name" placeholder="Имя" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Пароль (новый)" required>
+    <input type="password" id="confirm" placeholder="Подтвердите пароль" required>
+    <input type="text" id="subtime" placeholder="Как давно вы на меня подписаны?" required>
+    <input type="date" id="birthday" required>
+    <button type="submit">вход</button>
+  </form>
+
+  <script>
+    // Если пользователь уже зарегистрирован — сразу открыть site1.html
+    if (localStorage.getItem('registered') === 'true') {
+      window.open('site1.html', '_blank');
+      window.close();
+    }
+
+    function registerUser(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const confirm = document.getElementById('confirm').value.trim();
+      const subtime = document.getElementById('subtime').value.trim();
+      const birthday = document.getElementById('birthday').value.trim();
+
+      if (!name || !email || !password || !confirm || !subtime || !birthday) {
+        alert('Пожалуйста, заполните все поля.');
+        return;
+      }
+
+      if (password !== confirm) {
+        alert('Пароли не совпадают!');
+        return;
+      }
+
+      // Сохраняем данные в локальное хранилище
+      localStorage.setItem('registered', 'true');
+      localStorage.setItem('username', name);
+
+      // Открываем следующую страницу
+      window.open('site1.html', '_blank');
+      window.close();
+    }
+  </script>
+</body>
+</html>

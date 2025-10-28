@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Спонсировать — GgmoRoom</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #2b2b2b;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Кнопка Назад */
+    .back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #FFD700;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #2b2b2b;
+      color: white;
+      border: 1px solid #FFD700;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #ccc;
+      max-width: 700px;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Кнопка Отмена */
+    .cancel-button {
+      background-color: #ff7b7b;
+      color: black;
+      border: none;
+      padding: 15px 40px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 250px;
+    }
+
+    .cancel-button:hover {
+      background-color: #2b2b2b;
+      color: white;
+      border: 1px solid #ff7b7b;
+    }
+
+    /* Кнопка Спонсировать */
+    .sponsor-button {
+      background-color: #4da6ff;
+      color: black;
+      border: none;
+      padding: 15px 40px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 250px;
+    }
+
+    .sponsor-button:hover {
+      background-color: #2b2b2b;
+      color: white;
+      border: 1px solid #4da6ff;
+    }
+  </style>
+</head>
+<body>
+  <button class="back-button" onclick="goBack()">Назад</button>
+
+  <h1>Спонсировать проект</h1>
+  <p>
+    Вы можете поддержать проект GgmoRoom!  
+    Ваша помощь идёт на развитие сайта, организацию ивентов и создание новых идей.  
+    Спасибо каждому, кто помогает сделать наш проект лучше ❤️
+  </p>
+
+  <div class="buttons">
+    <button class="cancel-button" onclick="cancel()">Отмена</button>
+    <button class="sponsor-button" onclick="sponsor()">Спонсировать</button>
+  </div>
+
+  <script>
+    function goBack() {
+      window.open('site1.html', '_blank');
+      window.close();
+    }
+
+    function cancel() {
+      window.open('site1.html', '_blank');
+      window.close();
+    }
+
+    function sponsor() {
+      window.open('sponsortg.txt', '_blank');
+      window.close();
+    }
+  </script>
+</body>
+</html>
